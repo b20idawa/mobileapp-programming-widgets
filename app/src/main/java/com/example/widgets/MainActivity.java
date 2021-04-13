@@ -22,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
 
         ArrayAdapter<String> adapter=new ArrayAdapter<String>( this,R.layout.list_view_file,R.id.list_view_file_xml,ListData);
         ListView my_listeview=(ListView) findViewById(R.id.list_view_file_xml);
+        my_listeview.setAdapter(adapter);
 
     }
 }
