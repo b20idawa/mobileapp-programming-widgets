@@ -3,10 +3,13 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.EditText;
 
-
+import java.util.ArrayList;
+import java.util.Arrays;
 
 
 public class MainActivity extends AppCompatActivity {
+    private String[] Städer = {"Stockholm", "Göteborg", "Malmö"};
+    private ArrayList<String> ListData=new ArrayList<>(Arrays.asList(Städer));
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
