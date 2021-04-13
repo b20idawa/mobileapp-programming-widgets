@@ -44,7 +44,8 @@
         android:id="@+id/listview_item"
         android:layout_marginTop="500dp"
         android:layout_marginLeft="15dp"
-        android:layout_marginRight="15dp"/>
+        android:layout_marginRight="15dp"
+        android:padding="5dp"/>
 
 
 
