@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
         EditText editText = findViewById(R.id.my_edittext);
 
         ArrayAdapter<String> adapter=new ArrayAdapter<String>( this,R.layout.list_view_file,R.id.list_view_file_xml,ListData);
-        ListView my_listeview=(ListView) findViewById(R.id.list_view_file_xml);
+        ListView my_listeview=(ListView) findViewById(R.id.listview_item);
         my_listeview.setAdapter(adapter);
         my_listeview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
