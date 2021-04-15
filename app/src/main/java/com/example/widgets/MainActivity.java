@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
         my_listeview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Toast.makeText(getApplicationContext(), "Skriv din text här", Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(), "Fin stad!", Toast.LENGTH_LONG).show();
 
             }
         });
