@@ -2,7 +2,7 @@
 # Assignment 4
 
 ### EditText
-I activity_main.xml har elementet EditText lagts till. Elementet har ett antal rader kod som styr storlek och placering på skärmen. Bredden på elementet är satt till match_parent vilket betyder att det ska vara lika brett som förälderelementet. Höjden däremot har istället wrap_content vilket betyder att höjden kommer att anpassas efter innehållet i elementet. EditText har fyra rader kod som styr elementets placering. Alla fyra kodraderna är satt till "parent" vilket betyder att elementet kommer att placeras i centrerat av skärmen. För att elementet ska ha en förskriven text i rutan används andorid:hint tillsammans med "skriv din text här!". Det är alltså den mening som kommer att fylla elementets ruta tills det att en användare redigerar innehållet. Sist har också ett ID placerats på elementet vilket är my_edittext och kommer att användas i senare kodstycken.
+I activity_main.xml har elementet EditText lagts till. Elementet har ett antal rader kod som styr storlek och placering på skärmen. Bredden på elementet är satt till match_parent vilket betyder att det ska vara lika brett som förälderelementet. Höjden däremot har istället wrap_content vilket betyder att höjden kommer att anpassas efter innehållet i elementet. EditText har fyra rader kod som styr elementets placering. Alla fyra kodraderna är satt till "parent" vilket betyder att elementet kommer att placeras centrerat på skärmen. För att elementet ska ha en förskriven text i rutan används android:hint tillsammans med "skriv din text här!". Det är alltså den mening som kommer att fylla elementets ruta tills det att en användare redigerar innehållet. Sist har också ett ID placerats på elementet vilket är my_edittext och kommer att användas i senare kodstycken.
 
 ```
 <EditText
@@ -40,7 +40,7 @@ För att styla elementet EditText har ett antal rader kod applicerats i xml-file
 
 
 ### ImageView
-I activity_main.xml har elementet ImageView lagts till. Elementet har först och främst fyra rader kod som placerar ImageView centrerat på skrämen genom att ange "parent" för layout_constraint följt av riktningen. Elementets bredd och höjd är satt till match_parent vilket betyder att bilden kommer att anpassas efter förälderns bredd och höjd. För att elementet ska veta vilken bild som ska visas används app:srcCompat tillsammans med namnet på bilden. Bilden är också placerat i appen drawable. Sist finns också marginBottom tillsammans med 320dp som placerar bilden korrekt i appliaktionen utan att täcka andra element.
+I activity_main.xml har elementet ImageView lagts till. Elementet har först och främst fyra rader kod som placerar ImageView centrerat på skrämen genom att ange "parent" för layout_constraint följt av riktningen. Elementets bredd och höjd är satt till wrap_content vilket betyder att bilden kommer att ta upp så mycket plats som krävs för bildens storlek. För att elementet ska veta vilken bild som ska visas används app:srcCompat tillsammans med namnet på bilden. Bilden är också placerat i appen drawable. Sist finns också marginBottom tillsammans med 320dp som placerar bilden korrekt i applikationen utan att täcka andra element.
 ```
 <ImageView
         android:id="@+id/imageView2"
@@ -58,7 +58,7 @@ I activity_main.xml har elementet ImageView lagts till. Elementet har först och
 ```
 
 ### Layoutfil kommande ListView
-För att kunna skapa ett kommande ListView element har en ny layoutfil skapapts i mappen Layout. Filen döps till list_view_file.xml och innehåller ett TextView element. Till elementet skapats ett ID med hjälp av android:id. Det ID som anges är densamma namn som filnamnet på layoutfilen.
+För att kunna skapa ett kommande ListView element har en ny layoutfil skapats i mappen Layout. Filen döps till list_view_file.xml och innehåller ett TextView element. Till elementet skapats ett ID med hjälp av android:id. Det ID som anges är densamma namn som filnamnet på layoutfilen.
 ```
 <?xml version="1.0" encoding="utf-8"?>
 <TextView
@@ -70,7 +70,7 @@ För att kunna skapa ett kommande ListView element har en ny layoutfil skapapts 
 ```
 
 ### Arraylista
-I Public class i MainActitiy.java skapas en arraylista som kommer innehålla namn på städer. För att skapa en arraylista anges först en private string följt av namnet på arrayen vilket i detta fall är Städer. Därefter appliceras innehållet i arrayen innanför måsvingarna. I detta fall består arrayen av tre städer. När en private string applicerats måste också en private Arraylist skapas. Arraylistan som skapas är satt till string vilket betyder att listan ska innehålla strängen som precis har skapats. Därefter kommer "ListData=new ArrayList<>(Arrays.asList(Städer))" vilket betyder att arraylistan kommer att innehålla strängen som är definerad till Städer. I detta fall kommer listan bestå av Stockholm, Göteborg och Malmö. I och med att arraylistan skapas importeras också Arrays och ArrayList i MainActivity.java.
+I Public class i MainActivity.java skapas en arraylista som kommer innehålla namn på städer. För att skapa en arraylista anges först en private string följt av namnet på arrayen vilket i detta fall är Städer. Därefter appliceras innehållet i arrayen innanför måsvingarna. I detta fall består arrayen av tre städer. När en private string applicerats måste också en private Arraylist skapas. Arraylistan som skapas är satt till string vilket betyder att listan ska innehålla strängen som precis har skapats. Därefter kommer "ListData=new ArrayList<>(Arrays.asList(Städer))" vilket betyder att arraylistan kommer att innehålla strängen som är definerad till Städer. I detta fall kommer listan bestå av Stockholm, Göteborg och Malmö. I och med att arraylistan skapas importeras också Arrays och ArrayList i MainActivity.java.
 ```
  private String[] Städer = {"Stockholm", "Göteborg", "Malmö"};
  private ArrayList<String> ListData=new ArrayList<>(Arrays.asList(Städer));
@@ -84,7 +84,7 @@ ArrayAdapter<String> adapter=new ArrayAdapter<String>( this,R.layout.list_view_f
 ```
 
 ## Referens till ListView
-När en arrayadapter skapats är det dags att ange en referens till ListView. För att ange en referens anges ListView i MainActivity.java följt av my_listeview. För att koden ska veta vilket element som ska anropas anges findViewById följt av ett ID som kommer att anges på det kommande ListView elementet. Det är alltså ett kommande ListView element som anges som referens i MainActivity.java.
+När en arrayadapter har skapats är det dags att ange en referens till ListView. För att ange en referens anges ListView i MainActivity.java följt av my_listeview. För att koden ska veta vilket element som ska anropas anges findViewById följt av ett ID som kommer att anges på det kommande ListView elementet. Det är alltså ett kommande ListView element som anges som referens i MainActivity.java.
 
 ```
 ListView my_listeview=(ListView) findViewById(R.id.listview_item);
@@ -94,7 +94,7 @@ I och med att ett ListView element skapats har också elementet automatiskt impo
 import android.widget.ListView;
 ```
 ### Ansluta arrayadapter till ListView
-Sist måste också arrayadapterna ansluta till ListView för att kunna presentera innehållet i arrayen i en lista. För att ansluta adapter anges namnet på ListView elementet tillsammans med koden setAdapter(adapter) och på så sätt har elementen anslutit till varandra.
+Sist måste också arrayadaptern ansluta till ListView för att kunna presentera innehållet i arrayen i en lista. För att ansluta adaptern anges namnet på ListView elementet tillsammans med koden setAdapter(adapter) och på så sätt har elementen anslutit till varandra.
 
 ```
 my_listeview.setAdapter(adapter);
