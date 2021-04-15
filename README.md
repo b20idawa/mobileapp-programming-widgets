@@ -37,7 +37,8 @@ För att styla elementet EditText har ett antal rader kod applicerats i xml-file
         android:textColor="#fff"
         android:textSize="18sp" />
 ```
-
+#### Screenshot på EditText
+![](edittext.screen.png)
 
 ### ImageView
 I activity_main.xml har elementet ImageView lagts till. Elementet har först och främst fyra rader kod som placerar ImageView centrerat på skrämen genom att ange "parent" för layout_constraint följt av riktningen. Elementets bredd och höjd är satt till wrap_content vilket betyder att bilden kommer att ta upp så mycket plats som krävs för bildens storlek. För att elementet ska veta vilken bild som ska visas används app:srcCompat tillsammans med namnet på bilden. Bilden är också placerat i appen drawable. Sist finns också marginBottom tillsammans med 320dp som placerar bilden korrekt i applikationen utan att täcka andra element.
@@ -113,6 +114,9 @@ Toast.makeText(getApplicationContext(), "Fin stad!", Toast.LENGTH_LONG).show();
 });
 ```
 
+#### Screenshot på interaktion med ListView
+![](toast.screen.png)
+
 ### ListView element
 I activity_main.xml skapas nu ett ListView element. Elementet får en bredd och höjd som ska vara lika stor som elementets förälder eftersom match_parent anges i koden. Dessutom anges ett ID på ListView elementet. Det ID som anges är det ID som angavs i MainActivity.java när en referens skapades till ListView. Anledningen till att de ska ha samma ID är för att rätt referens ska anges och för att rätt innehåll ska presenteras på rätt ställe.
 
@@ -125,5 +129,6 @@ android:id="@+id/listview_item">
 </ListView>
 ```
 
-
+#### Screenshot på applikationen
+![](screen.png)
 
